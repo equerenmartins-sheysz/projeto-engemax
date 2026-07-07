@@ -1,0 +1,622 @@
+/* RESET BÁSICO - Tira as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cor de fundo baseada no papel do panfleto */
+body {
+    background-color: #0b1a30; 
+    color: #333;
+}
+
+/* ESTILOS DO CABEÇALHO */
+.cabecalho {
+    background-color: #ffffff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Dá uma sombrinha legal */
+}
+
+/* Estilizando o Logo em texto para parecer com a imagem */
+.logo-engemax {
+    color: #082996; /* Azul do texto ENGEMAX */
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.logo-engemax span {
+    color: #082996; /* Azul do símbolo */
+}
+
+.subtitulo-logo {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+/* Estilo do botão no topo */
+.btn-topo {
+    background-color: #082996;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-topo:hover {
+    background-color: #fab802; /* Muda de cor ao passar o mouse */
+}
+
+/* ESTILOS DO BANNER PRINCIPAL */
+.banner-principal {
+    background-color: #0b1a30; /* Fundo azul escuro */
+    background-image: linear-gradient(rgba(11, 26, 48, 0.8), rgba(11, 26, 48, 0.8));
+    color: #F8F5F0;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 5px solid #fab802;
+}
+
+.banner-principal h2 {
+    color: #fab802;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner-principal p {
+    font-size: 18px;
+}
+/* NOVO DESIGN FORMAL E INTERATIVO */
+
+.secao-trabalhe-conosco {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza a seção inteira na tela */
+}
+
+/* Estilo do bloco de introdução da empresa */
+.caixa-apresentacao {
+    background-color: #ffffff;
+    border-left: 6px solid #fab802; /* Linha elegante dourada na lateral esquerda */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra bem sutil */
+    margin-bottom: 40px;
+}
+
+.caixa-apresentacao h3 {
+    color: #082996;
+    font-size: 22px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.texto-introducao {
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo do botão de revelação */
+#btn-vagas {
+    background-color: #082996;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#btn-vagas:hover {
+    background-color: #fab802; /* Muda para dourado ao passar o mouse */
+    transform: translateY(-2px); /* Efeito suave de subida */
+}
+
+/* LÓGICA DE EXIBIÇÃO (Esconde/Mostra) */
+.vagas-ocultas {
+    display: none; /* Começa totalmente invisível */
+}
+
+.vagas-visiveis {
+    display: block; /* Torna visível quando clicado */
+}
+
+.titulo-vagas-formal {
+    color: #fab802;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0; /* Linha cinza divisória */
+}
+
+/* RETÂNGULOS SEPARADOS (Cards de Vagas) */
+.card-vaga {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0; /* Borda fina e séria */
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse por cima do retângulo da vaga */
+.card-vaga:hover {
+    border-color: #fab802; /* Borda ganha destaque dourado */
+    box-shadow: 0 4px 12px rgba(179, 139, 95, 0.12);
+}
+/* AJUSTES DOS RETÂNGULOS (Cards de Vagas Expansíveis) */
+.card-vaga {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Muda o mouse para a "mãozinha" indicando que é clicável */
+}
+
+.card-vaga:hover {
+    border-color: #b38b5f;
+    box-shadow: 0 4px 12px rgba(179, 139, 95, 0.12);
+}
+
+.linha-titulo-vaga {
+    display: flex;
+    justify-content: space-between; /* Coloca o título de um lado e a seta do outro */
+    align-items: center;
+}
+
+.simbolo-vaga {
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-vaga h4 {
+    color: #0b1a30;
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Estilo da Setinha */
+.seta-vaga {
+    font-size: 12px;
+    color: #fab802;
+    transition: transform 0.3s ease; /* Faz a seta girar suavemente */
+}
+
+/* Faz a seta virar para cima quando a vaga estiver aberta */
+.seta-girada {
+    transform: rotate(180deg);
+}
+
+/* LÓGICA DE MOSTRAR/ESCONDER A DESCRIÇÃO */
+.descricao-vaga {
+    display: none; /* A descrição começa escondida */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e0e0e0; /* Cria uma linha pontilhada separando o título do texto */
+}
+
+.descricao-visivel {
+    display: block; /* Aparece quando o JavaScript adiciona essa classe */
+}
+
+.descricao-vaga p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* =========================================
+   SEÇÃO DE INFORMAÇÕES EXTRAS (INTERATIVAS)
+   ========================================= */
+
+.detalhes-extras {
+    padding: 20px 20px 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-informacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    align-items: start; /* Impede que as caixas estiquem de forma estranha quando fechadas */
+}
+
+/* Transformamos a caixa em um botão clicável */
+.caixa-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #0b1a30;
+    cursor: pointer; /* Mãozinha de clique */
+    transition: all 0.3s ease;
+}
+
+.caixa-info:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px); /* Levanta a caixa de leve ao passar o mouse */
+}
+
+
+/* Novo cabeçalho da caixa (com a seta) */
+.cabecalho-caixa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.caixa-info h4 {
+    color: #0b1a30;
+    font-size: 16px;
+    margin: 0; /* Tiramos as margens antigas para alinhar com a seta */
+}
+
+.seta-caixa {
+    font-size: 12px;
+    color: #0b1a30;
+    transition: transform 0.3s ease;
+}
+
+.caixa-destaque .seta-caixa {
+    color: #0b1a30; /* Seta dourada na caixa de benefícios */
+}
+
+/* LÓGICA DE ESCONDER E MOSTRAR */
+.corpo-caixa {
+    display: none; /* Começa escondido */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e0e0e0; /* Linha divisória */
+}
+
+.caixa-aberta {
+    display: block; /* Aparece com o JavaScript */
+}
+
+/* Ajustes visuais do texto interno */
+.conteudo-info {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.conteudo-info strong {
+    color: #0b1a30;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.conteudo-info ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.conteudo-info li {
+    margin-bottom: 4px;
+}
+
+.lista-check p {
+    margin-bottom: 8px;
+}
+
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+/* =========================================
+   SEÇÃO CULTURA E CTA (Call to Action)
+   ========================================= */
+.cultura-cta {
+    background-color: #0b1a30; /* Fundo azul escuro do topo para criar harmonia */
+    color: #F8F5F0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.conteudo-cultura {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.cultura-cta h3 {
+    color: #fab802; /* Cor dourada/marrom clara */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.intro-cultura {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: #e0d8d0;
+}
+
+/* Grid para os Valores ficarem bem distribuídos */
+.grid-valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.item-valor {
+    background-color: rgba(255, 255, 255, 0.05); /* Um fundo branco bem transparente */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(179, 139, 95, 0.3); /* Borda dourada suave */
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.item-valor:hover {
+    background-color: rgba(179, 139, 95, 0.2);
+    border-color: #fab802;
+    transform: translateY(-3px); /* Efeito de flutuar */
+}
+
+/* Caixa branca para dar destaque ao Botão */
+.caixa-cta {
+    background-color: #ffffff;
+    color: #0b1a30;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.caixa-cta h3 {
+    color: #0b1a30;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.caixa-cta p {
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+/* O Grande Botão de Candidatura */
+.btn-candidatar {
+    display: inline-block;
+    background-color: #082996;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(179, 139, 95, 0.4);
+    letter-spacing: 1px;
+}
+
+.btn-candidatar:hover {
+    background-color: #fab802; /* Escurece um pouco ao passar o mouse */
+    transform: scale(1.05); /* Dá um zoom de 5% no botão */
+}
+
+/* =========================================
+   RODAPÉ (Footer)
+   ========================================= */
+.rodape {
+    background-color: #082996; /* Marrom escuro */
+    color: #F8F5F0;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid #fab802;
+}
+
+.rodape h4 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.info-contato {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha caso a tela seja pequena (celular) */
+    justify-content: center;
+    gap: 25px;
+    font-size: 14px;
+}
+
+.info-contato p {
+    color: #e0d8d0;
+}
+/* =========================================
+   PÁGINA DE CANDIDATURA (Formulário)
+   ========================================= */
+
+.fundo-candidatura {
+    background-color: #e0d8d0; /* Fundo um pouco mais escuro para destacar a caixa branca */
+}
+
+.secao-formulario {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.caixa-form {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 5px solid #082996; /* Faixa azul da empresa */
+}
+
+.caixa-form h2 {
+    color: #0b1a30;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+.caixa-form p {
+    color: #555555;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* Estilizando os campos de texto e seleção */
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Coloca o título (label) em cima da caixa de texto */
+}
+
+.grupo-input label {
+    font-weight: bold;
+    color: #082996;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.grupo-input input, 
+.grupo-input select {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efeito quando o usuário clica dentro da caixa de texto */
+.grupo-input input:focus, 
+.grupo-input select:focus {
+    border-color: #082996;
+    box-shadow: 0 0 5px rgba(179, 139, 95, 0.4);
+}
+
+/* Botão de enviar */
+.btn-enviar-form {
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    background-color: #082996;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.btn-enviar-form:hover {
+    background-color: #0b1a30; /* Fica azul escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+/* =========================================
+   LINHA DO TEMPO (Rastreio da Candidatura)
+   ========================================= */
+
+/* Classe curinga para esconder coisas */
+.oculto {
+    display: none !important;
+}
+
+.titulo-sucesso {
+    color: #2e7d32; /* Um verde bonito para dar sensação de sucesso */
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.linha-do-tempo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+    text-align: left;
+}
+
+/* Essa é a linha cinza que liga todas as bolinhas */
+.linha-do-tempo::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 18px; /* Centraliza a linha no meio das bolinhas de 40px */
+    width: 4px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Garante que a bolinha fique por cima da linha */
+}
+
+/* Bolinha padrão (cinza) */
+.bolinha {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    color: #777777;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* O texto do lado da bolinha */
+.info-etapa {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-etapa strong {
+    color: #555555;
+    font-size: 16px;
+}
+
+.info-etapa span {
+    color: #888888;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+/* Estilo para a etapa que já foi concluída */
+.etapa-concluida .bolinha {
+    background-color: #082996; /* Azul da empresa */
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(11, 26, 48, 0.4); /* Brilhozinho */
+}
+
+.etapa-concluida .info-etapa strong {
+    color: #082996;
+}
+
+.etapa-concluida .info-etapa span {
+    color: #082996;
+    font-weight: 500;
+}

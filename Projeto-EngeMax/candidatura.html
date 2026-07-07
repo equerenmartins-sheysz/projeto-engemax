@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidatura | EngeMax</title>
+    <!-- Usamos o mesmo arquivo CSS para manter as cores e fontes -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fundo-candidatura">
+
+    <!-- CABEÇALHO SIMPLIFICADO -->
+    <header class="cabecalho">
+        <div class="logo-container">
+            <h1 class="logo-engemax"><span> ENGEMAX</h1>
+        </div>
+        <!-- Botão para voltar à página principal -->
+        <a href="index.html" class="btn-topo">Voltar para Vagas</a>
+    </header>
+<section class="secao-formulario">
+        <div class="caixa-form">
+            <h2>Envie seu Currículo</h2>
+            <p id="texto-intro">Preencha os dados abaixo para se candidatar às oportunidades na unidade de Barcarena - PA.</p>
+
+            <form id="form-candidatura" onsubmit="enviarCandidatura(event)">
+                
+                <div class="grupo-input">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="telefone">Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" placeholder="(91) 90000-0000" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="vaga">Vaga Desejada</label>
+                    <select id="vaga" required>
+                        <option value="" disabled selected>Selecione uma vaga...</option>
+                        <option value="caldeireiro">Caldeireiro</option>
+                        <option value="operador">Operador Mantenedor</option>
+                        <option value="mecanico">Mecânico de Manutenção</option>
+                        <option value="eletricista">Eletricista Industrial</option>
+                        <option value="instrumentista">Instrumentista</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="curriculo">Anexar Currículo (PDF ou DOCX)</label>
+                    <input type="file" id="curriculo" accept=".pdf, .doc, .docx" required>
+                </div>
+
+                <button type="submit" class="btn-enviar-form">ENVIAR CANDIDATURA</button>
+            </form>
+
+            <div id="painel-acompanhamento" class="oculto">
+                <h3 class="titulo-sucesso">🎉 Candidatura Enviada!</h3>
+                <p>Acompanhe o status do seu processo seletivo:</p>
+                
+                <div class="linha-do-tempo">
+                    <div class="etapa etapa-concluida">
+                        <div class="bolinha">✓</div>
+                        <div class="info-etapa">
+                            <strong>Cadastro</strong>
+                            <span>Currículo recebido com sucesso.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="bolinha">2</div>
+                        <div class="info-etapa">
+                            <strong>Entrevista com RH</strong>
+                            <span>Aguardando agendamento.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="bolinha">3</div>
+                        <div class="info-etapa">
+                            <strong>Entrevista Técnica</strong>
+                            <span>Avaliação com o gestor da área.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="bolinha">4</div>
+                        <div class="info-etapa">
+                            <strong>Avaliação Prática</strong>
+                            <span>Teste de conhecimentos.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="etapa">
+                        <div class="bolinha">5</div>
+                        <div class="info-etapa">
+                            <strong>Contratação</strong>
+                            <span>Bem-vindo à EngeMax!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <script>
+        function enviarCandidatura(event) {
+            // Evita que a página recarregue
+            event.preventDefault(); 
+            
+            // Pega os elementos que vamos manipular
+            var formulario = document.getElementById("form-candidatura");
+            var painel = document.getElementById("painel-acompanhamento");
+            var textoIntro = document.getElementById("texto-intro");
+            
+            // Esconde o formulário e o texto de introdução
+            formulario.classList.add("oculto");
+            textoIntro.classList.add("oculto");
+            
+            // Mostra o painel de acompanhamento tirando a classe 'oculto'
+            painel.classList.remove("oculto");
+            
+            // Rola a página um pouco para cima para o candidato ver a mensagem
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
