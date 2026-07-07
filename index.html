@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco | EngeMax</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo-container">
+            <h1 class="logo-engemax"> ENGEMAX</h1>
+            <p class="subtitulo-logo">ENGENHARIA, MANUTENÇÃO E PRESTAÇÃO DE SERVIÇOS LTDA</p>
+        </div>
+        
+        <a href="#vagas" class="btn-topo">Fale Conosco</a>
+    </header>
+
+    <section class="banner-principal">
+        <div class="conteudo-banner">
+            <h2>Soluções inteligentes,<br>resultados que constroem.</h2>
+            <p>Faça parte do nosso time em Barcarena - PA</p>
+        </div>
+    </section>
+<section id="oportunidades" class="secao-trabalhe-conosco">
+        
+        <div class="caixa-apresentacao">
+            <h3>CONHEÇA A ENGEMAX</h3>
+            <p class="texto-introducao">
+                Na ENGEMAX, acreditamos que pessoas fazem a diferença. <br><br>
+                Somos uma empresa especializada em engenharia, manutenção industrial e prestação de serviços, oferecendo soluções para os setores industrial, portuário e metalúrgico. <br><br>
+                Nosso propósito é entregar serviços com segurança, qualidade, inovação e excelência operacional, valorizando nossos colaboradores e investindo no desenvolvimento profissional. <br><br>
+                Se você busca desafios, aprendizado contínuo e oportunidades de crescimento, venha fazer parte do nosso time!
+            </p>
+            
+            <button id="btn-vagas" onclick="alternarVagas()">Conhecer Vagas Disponíveis</button>
+        </div>
+
+        <div id="container-vagas" class="vagas-ocultas">
+            <h3 class="titulo-vagas-formal">Oportunidades Abertas (Barcarena - PA)</h3>
+            <!-- Lista de Cargos em Retângulos Separados -->
+            <div class="lista-cards-vagas">
+                
+                <!-- Vaga 1 -->
+                <div class="card-vaga" onclick="alternarDescricao(this)">
+                    <div class="linha-titulo-vaga">
+                        <div>
+                            <span class="simbolo-vaga">🧰</span>
+                            <h4>CALDEIREIRO</h4>
+                        </div>
+                        <span class="seta-vaga">▼</span>
+                    </div>
+                    <div class="descricao-vaga">
+                        <p>* Fabricar estruturas metálicas; <br><br>
+                        * Interpretar desenhos técnicos; <br><br>
+                        * Realizar corte, dobra e montagem.; <br><br>
+                        * Ajustar peças metálicas; <br><br>
+                        * Executar reparos industriais; <br><br>
+                        * Trabalhar conforme normas de segurança.</p>
+                    </div>
+                </div>
+
+                <!-- Vaga 2 -->
+                <div class="card-vaga" onclick="alternarDescricao(this)">
+                    <div class="linha-titulo-vaga">
+                        <div>
+                            <span class="simbolo-vaga">👷</span>
+                            <h4>OPERADOR MANTENEDOR</h4>
+                        </div>
+                        <span class="seta-vaga">▼</span>
+                    </div>
+                    <div class="descricao-vaga">
+                        <p>* Operar equipamentos industriais; <br><br>
+                        * Monitorar indicadores operacionais; <br><br>
+                        * Realizar inspeções diárias; <br><br>
+                        * Executar pequenas intervenções mecânicas; <br><br>
+                        * Registrar ocorrências; <br><br>
+                        * Apoiar a equipe de manutenção.</p>
+                    </div>
+                </div>
+
+                <!-- Vaga 3 -->
+                <div class="card-vaga" onclick="alternarDescricao(this)">
+                    <div class="linha-titulo-vaga">
+                        <div>
+                            <span class="simbolo-vaga">🔧</span>
+                            <h4>MECÂNICO DE MANUTENÇÃO</h4>
+                        </div>
+                        <span class="seta-vaga">▼</span>
+                    </div>
+                    <div class="descricao-vaga">
+                        <p>* Executar manutenção preventiva, corretiva e preditiva; <br><br>
+                        * Diagnosticar falhas em equipamentos industriais; <br><br>
+                        * Realizar desmontagem, montagem e substituição de componentes; <br><br>
+                        * Interpretar desenhos técnicos; <br><br>
+                        * Elaborar relatórios de manutenção; <br><br>
+                        * Cumprir as normas de segurança do trabalho.</p>
+                    </div>
+                </div>
+
+                <!-- Vaga 4 -->
+                <div class="card-vaga" onclick="alternarDescricao(this)">
+                    <div class="linha-titulo-vaga">
+                        <div>
+                            <span class="simbolo-vaga">⚡</span>
+                            <h4>ELETRICISTA INDUSTRIAL</h4>
+                        </div>
+                        <span class="seta-vaga">▼</span>
+                    </div>
+                    <div class="descricao-vaga">
+                        <p>* Executar manutenção preventiva, corretiva e preditiva em sistemas industriais; <br><br>
+                        * Diagnosticar falhas em painéis, motores, comandos e circuitos elétricos; <br><br>
+                        * Realizar instalação, montagem e substituição de componentes elétricos; <br><br>
+                        * Interpretar diagramas elétricos e esquemas de comando; <br><br>
+                        * Realizar testes e medições em equipamentos elétricos; <br><br>
+                        * Cumprir as normas de Segurança do Trabalho e procedimentos técnicos. </p>
+                    </div>
+                </div>
+
+                <!-- Vaga 5 -->
+                <div class="card-vaga" onclick="alternarDescricao(this)">
+                    <div class="linha-titulo-vaga">
+                        <div>
+                            <span class="simbolo-instrumentação">⏱️</span>
+                            <h4>INSTRUMENTISTA</h4>
+                        </div>
+                        <span class="seta-vaga">▼</span>
+                    </div>
+                    <div class="descricao-vaga">
+                        <p>* Executar manutenção preventiva, corretiva e calibração de instrumentos industriais; <br><br>
+                       * Diagnosticar falhas em sensores, transmissores, válvulas e sistemas de automação; <br><br>
+                        * Instalar, configurar e substituir instrumentos de medição e controle; <br><br>
+                        * Interpretar diagramas de instrumentação e documentação técnica; <br><br>
+                        * Realizar testes, calibrações e ajustes em instrumentos de processo; <br><br>
+                        * Cumprir as normas de Segurança do Trabalho e procedimentos técnicos. </p>
+                    </div>
+                </div>
+        </div>
+    </section>
+<section class="detalhes-extras">
+        <div class="grid-informacoes">
+            
+            <div class="caixa-info" onclick="alternarCaixa(this)">
+                <div class="cabecalho-caixa">
+                    <h4>🎓 Requisitos e Qualificações</h4>
+                    <span class="seta-caixa">▼</span>
+                </div>
+                <div class="corpo-caixa">
+                    <div class="conteudo-info">
+                        <strong>Escolaridade</strong>
+                        <ul>
+                            <li>Ensino Médio completo;</li>
+                            <li>Curso Técnico em Mecânica, Eletromecânica ou áreas afins.</li>
+                        </ul>
+                        
+                        <strong>Experiência</strong>
+                        <ul>
+                            <li>Experiência em manutenção industrial;</li>
+                            <li>Vivência em ambiente industrial;</li>
+                            <li>Conhecimento em equipamentos rotativos e sistemas mecânicos;</li>
+                            <li>Manutenção preventiva e corretiva.</li>
+                        </ul>
+                        
+                        <strong>Conhecimentos Técnicos</strong>
+                        <ul>
+                            <li>Leitura e interpretação de desenhos técnicos;</li>
+                            <li>Metrologia e Lubrificação Industrial;</li>
+                            <li>Pacote Office básico e Segurança do Trabalho.</li>
+                        </ul>
+                        
+                        <strong>Certificações (Diferencial)</strong>
+                        <p>NR-10, NR-12, NR-33, NR-35, Trabalho em Altura e Espaço Confinado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="caixa-info" onclick="alternarCaixa(this)">
+                <div class="cabecalho-caixa">
+                    <h4>🧠 Perfil que buscamos</h4>
+                    <span class="seta-caixa">▼</span>
+                </div>
+                <div class="corpo-caixa">
+                    <div class="conteudo-info lista-check">
+                        <p>✔️ Proatividade</p>
+                        <p>✔️ Organização</p>
+                        <p>✔️ Trabalho em equipe</p>
+                        <p>✔️ Comunicação</p>
+                        <p>✔️ Responsabilidade</p>
+                        <p>✔️ Comprometimento</p>
+                        <p>✔️ Ética profissional</p>
+                        <p>✔️ Foco em segurança</p>
+                        <p>✔️ Vontade de aprender</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="caixa-info caixa-destaque" onclick="alternarCaixa(this)">
+                <div class="cabecalho-caixa">
+                    <h4>🎁 Benefícios</h4>
+                    <span class="seta-caixa">▼</span>
+                </div>
+                <div class="corpo-caixa">
+                    <div class="conteudo-info grid-beneficios">
+                        <p>🍽️ Vale-Alimentação</p>
+                        <p>🚌 Vale-Transporte</p>
+                        <p>🏥 Plano de Saúde</p>
+                        <p>🦷 Plano Odonto</p>
+                        <p>❤️ Seguro de Vida</p>
+                        <p>📚 Treinamentos</p>
+                        <p>📈 Plano de Carreira</p>
+                        <p>🏆 Crescimento</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="caixa-info" onclick="alternarCaixa(this)">
+                <div class="cabecalho-caixa">
+                    <h4>ℹ️ Informações Adicionais</h4>
+                    <span class="seta-caixa">▼</span>
+                </div>
+                <div class="corpo-caixa">
+                    <div class="conteudo-info">
+                        <strong>Local de Trabalho</strong>
+                        <p>📍 Barcarena – PA</p>
+                        <br>
+                        <strong>Regime de contratação</strong>
+                        <p>CLT</p>
+                        <br>
+                        <strong>Jornada</strong>
+                        <p>44 horas semanais</p>
+                        <p>Disponibilidade para atuar em turnos, quando necessário.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SEÇÃO CULTURA E CHAMADA PARA AÇÃO -->
+    <section class="cultura-cta">
+        <div class="conteudo-cultura">
+            <h3>Nossa cultura</h3>
+            <p class="intro-cultura">Na ENGEMAX, trabalhamos guiados por valores que fazem parte da nossa rotina:</p>
+            
+            <div class="grid-valores">
+                <div class="item-valor">🛡️ Segurança em primeiro lugar</div>
+                <div class="item-valor">🤝 Respeito às pessoas</div>
+                <div class="item-valor">⭐ Excelência nos resultados</div>
+                <div class="item-valor">💡 Inovação</div>
+                <div class="item-valor">🌱 Desenvolvimento contínuo</div>
+                <div class="item-valor">⚙️ Qualidade em tudo o que fazemos</div>
+            </div>
+        </div>
+
+        <!-- Caixa do Botão de Candidatura -->
+        <div class="caixa-cta">
+            <h3>Pronto para fazer parte do nosso time?</h3>
+            <p>Clique no botão abaixo e envie seu currículo.</p>
+            <!-- A tag 'a' funciona como um link, mas vamos estilizá-la como botão no CSS -->
+            <a href="candidatura.html" class="btn-candidatar">CANDIDATAR-SE AGORA</a>
+        </div>
+    </section>
+
+    <!-- RODAPÉ DO SITE (Footer) -->
+    <footer class="rodape">
+        <div class="conteudo-rodape">
+            <h4>ENGEMAX – Engenharia, Manutenção e Prestação de Serviços</h4>
+            <div class="info-contato">
+                <p>📍 Barcarena – PA</p>
+                <p>📧 rh@engemax.com.br</p>
+                <p>📞 (91) 99999-9999</p>
+                <p>🌐 www.engemax.com.br</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function alternarVagas() {
+            var container = document.getElementById("container-vagas");
+            var botao = document.getElementById("btn-vagas");
+            
+            // Se as vagas já estiverem aparecendo, esconde e muda o texto do botão
+            if (container.classList.contains("vagas-visiveis")) {
+                container.classList.remove("vagas-visiveis");
+                botao.textContent = "Conhecer Vagas Disponíveis";
+            } else {
+                // Se estiverem escondidas, mostra e muda o texto do botão
+                container.classList.add("vagas-visiveis");
+                botao.textContent = "Ocultar Vagas";
+            }
+        }
+    </script>
+    <!-- CÓDIGO JAVASCRIPT -->
+    <script>
+        // Função 1: Mostra ou esconde todas as vagas (Botão principal)
+        function alternarVagas() {
+            var container = document.getElementById("container-vagas");
+            var botao = document.getElementById("btn-vagas");
+            
+            if (container.classList.contains("vagas-visiveis")) {
+                container.classList.remove("vagas-visiveis");
+                botao.textContent = "Conhecer Vagas Disponíveis";
+            } else {
+                container.classList.add("vagas-visiveis");
+                botao.textContent = "Ocultar Vagas";
+            }
+        }
+
+        // Função 2: Abre ou fecha a descrição de cada vaga individual (Efeito Acordeão)
+        function alternarDescricao(elementoCard) {
+            // Procura a descrição e a seta que estão SOMENTE dentro do card que foi clicado
+            var descricao = elementoCard.querySelector('.descricao-vaga');
+            var seta = elementoCard.querySelector('.seta-vaga');
+            
+            // Verifica se a descrição já está aparecendo
+            if (descricao.classList.contains('descricao-visivel')) {
+                // Se sim, esconde e volta a seta ao normal
+                descricao.classList.remove('descricao-visivel');
+                seta.classList.remove('seta-girada');
+            } else {
+                // Se não, mostra o texto e gira a seta para cima
+                descricao.classList.add('descricao-visivel');
+                seta.classList.add('seta-girada');
+            }
+        }
+    </script>
+<!-- CÓDIGO JAVASCRIPT -->
+    <script>
+        // Função 1: Mostra ou esconde todas as vagas
+        function alternarVagas() {
+            var container = document.getElementById("container-vagas");
+            var botao = document.getElementById("btn-vagas");
+            
+            if (container.classList.contains("vagas-visiveis")) {
+                container.classList.remove("vagas-visiveis");
+                botao.textContent = "Conhecer Vagas Disponíveis";
+            } else {
+                container.classList.add("vagas-visiveis");
+                botao.textContent = "Ocultar Vagas";
+            }
+        }
+
+        // Função 2: Abre ou fecha a descrição das vagas (Acordeão)
+        function alternarDescricao(elementoCard) {
+            var descricao = elementoCard.querySelector('.descricao-vaga');
+            var seta = elementoCard.querySelector('.seta-vaga');
+            
+            if (descricao.classList.contains('descricao-visivel')) {
+                descricao.classList.remove('descricao-visivel');
+                seta.classList.remove('seta-girada');
+            } else {
+                descricao.classList.add('descricao-visivel');
+                seta.classList.add('seta-girada');
+            }
+        }
+
+        // Função 3: Abre ou fecha o conteúdo das 4 caixas extras
+        function alternarCaixa(elementoCaixa) {
+            var corpo = elementoCaixa.querySelector('.corpo-caixa');
+            var seta = elementoCaixa.querySelector('.seta-caixa');
+            
+            if (corpo.classList.contains('caixa-aberta')) {
+                corpo.classList.remove('caixa-aberta');
+                seta.classList.remove('seta-girada');
+            } else {
+                corpo.classList.add('caixa-aberta');
+                seta.classList.add('seta-girada');
+            }
+        }
+    </script>
+</body>
+</html>
